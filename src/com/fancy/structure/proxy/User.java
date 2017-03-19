@@ -10,10 +10,11 @@ import java.util.Date;
  * @author Jiangjiaze
  * @version Id: User.java, v 0.1 2017/3/17 16:38 FancyKong Exp $$
  */
+@Entity
 public class User {
     private long id;
     private String name;
-    private Date date;
+    private Date create_time;
 
     public long getId() {
         return id;
@@ -31,11 +32,20 @@ public class User {
         this.name = name;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getCreate_time() {
+        return create_time;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setCreate_time(Date create_time) {
+        this.create_time = create_time;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", create_time=" + create_time +
+                '}';
     }
 }
